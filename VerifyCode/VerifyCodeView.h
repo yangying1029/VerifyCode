@@ -17,11 +17,6 @@ extern NSString * const CodeDidInputCompeletNotification;
 @interface VerifyCodeView : UIView
 
 /**
- 设置好属性后调用初始化密码框方法
- */
-- (void)initCodeView;
-
-/**
  清除输入密码
  */
 - (void)clearCode;

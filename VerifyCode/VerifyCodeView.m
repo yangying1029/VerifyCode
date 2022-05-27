@@ -37,12 +37,9 @@ NSString *const CodeDidInputCompeletNotification = @"CodeDidInputCompeletNotific
         self.labelArray = [NSMutableArray array];
         self.isSecure = YES;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteBackward) name:TextFieldDidDeleteBackwardNotification object:nil];
+        [self initUI];
     }
     return self;
-}
-
-- (void)initCodeView {
-    [self initUI];
 }
 
 

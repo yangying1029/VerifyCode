@@ -28,20 +28,19 @@
     view.isSecure = NO;
     __weak VerifyCodeView *weakView = view;
     view.codeInputCompeletBlock = ^(NSString * _Nonnull codeString) {
-//        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"输入信息" message:codeString preferredStyle:(UIAlertControllerStyleAlert)];
-//        
-//        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-//            [weakView clearCode];
-//        }];
-//        
-//        [alertVC addAction:action];
-//        
-//        [self presentViewController:alertVC animated:YES completion:nil];
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"输入信息" message:codeString preferredStyle:(UIAlertControllerStyleAlert)];
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            [weakView clearCode];
+        }];
+        
+        [alertVC addAction:action];
+        
+        [self presentViewController:alertVC animated:YES completion:nil];
         
         
     };
     
-    [view initCodeView];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
